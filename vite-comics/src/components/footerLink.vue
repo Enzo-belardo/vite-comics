@@ -67,6 +67,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+
 footer{
     background-image: url(../assets/img/footer-bg.jpg);
 }
@@ -88,23 +90,26 @@ footer{
             border: solid 1px blue;
             padding: 0.5rem 1rem;
             background-color: transparent;
-            color: white;
+            color: $main-color;
         }
         .icon{
-            color: white;
+            color: $main-color;
         }
     }
 }
 nav{
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
-    color: white;
 }
 ul{
     list-style-type: none;
+    h4{
+        color: $main-color;
+    }
     li{
         padding: 0;
+        color: $link-color;
     }
 }
 

@@ -1,5 +1,52 @@
 <script>
 export default{
+    data(){
+        return{
+            links:[
+
+                {
+                    link: 'CHARACTERS',
+                    active: false,
+                },
+                {
+                    link: 'COMICS',
+                    active: true,
+                },
+                {
+                    link: 'MOVIES',
+                    active: false,
+                },
+                {
+                    link: 'TV',
+                    active: false,
+                },
+                {
+                    link: 'GAMES',
+                    active: false,
+                },
+                {
+                    link: 'COLLECTIBILIES',
+                    active: false,
+                },
+                {
+                    link: 'VIDEOS',
+                    active: false,
+                },
+                {
+                    link: 'FANS',
+                    active: false,
+                },
+                {
+                    link: 'NEWS',
+                    active: false,
+                },
+                {
+                    link: 'SHOP',
+                    active: false,
+                },        
+            ],
+        }
+    }
 
 }
 
@@ -13,14 +60,9 @@ export default{
             </div>
             <div class="list-nav">
                 <ul>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
+                    <li v-for="element in links" :class="(element.active) ? 'active' : ''">
+                        {{ element.link }}
+                    </li>
                 </ul>
             </div>
         </nav>  
@@ -28,6 +70,7 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
  nav{
     display: flex;
     width: 80%;
@@ -44,6 +87,12 @@ export default{
     li{
         list-style-type: none;
         padding: .5rem;
+        cursor: pointer;
+        &.active,
+        &:hover{
+           color: blue;
+           border-bottom: solid 2px blue;
+        }
     }
  }
 
