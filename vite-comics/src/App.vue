@@ -20,8 +20,6 @@ import footerLink from './components/footerLink.vue'
     <footerLink/>
   </footer>
 
-  <follow/>
-  
 </template>
 
 <style lang="scss">

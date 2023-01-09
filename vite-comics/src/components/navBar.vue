@@ -91,7 +91,7 @@ export default{
         &.active,
         &:hover{
            color: blue;
-           border-bottom: solid 2px blue;
+           border-bottom: solid 2px $dc-color;
         }
     }
  }
