@@ -2,7 +2,7 @@
 import navBar from './components/navBar.vue'
 import articleMain from './components/articleMain.vue'
 import footerLink from './components/footerLink.vue'
-import follow from './components/follow.vue'
+
 
 
 </script>
