@@ -60,7 +60,7 @@ export default{
             </div>
             <div class="list-nav">
                 <ul>
-                    <li v-for="element in links" :class="(element.active) ? 'active' : ''">
+                    <li v-for="element in links" :class="{ 'active': element.active }">
                         {{ element.link }}
                     </li>
                 </ul>
@@ -71,27 +71,32 @@ export default{
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+header{
+    color: $main-color;
+}
  nav{
     display: flex;
     width: 80%;
     margin: auto;
     justify-content: space-between;
- }
- .logo img{
+    align-items: center;
+    color: $nav-color;
+}
+.logo img{
     width: 50%;
     margin-top: .5rem;
- }
+}
 
- ul{
+ul{
     display: flex;
     li{
+        padding: .3rem;
         list-style-type: none;
-        padding: .5rem;
         cursor: pointer;
         &.active,
         &:hover{
-           color: blue;
-           border-bottom: solid 2px $dc-color;
+           color: $dc-color;
+           border-bottom: solid 2px $dc-color;  
         }
     }
  }

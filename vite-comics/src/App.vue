@@ -1,8 +1,16 @@
-<script setup>
+<script>
 import navBar from './components/navBar.vue'
 import articleMain from './components/articleMain.vue'
 import footerLink from './components/footerLink.vue'
 
+export default {
+  name: 'AppDC',
+  components: {
+    navBar,
+    articleMain,
+    footerLink
+  }
+}
 
 
 </script>

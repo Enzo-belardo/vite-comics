@@ -28,29 +28,31 @@ export default{
                     </ul>
                 </div>
 
-               <ul>
-                 <h4>DC</h4>
-                 <li>Terms of use</li>
-                 <li>Privacy policy (new)</li>
-                 <li>Ad choise</li>
-                 <li>Advertising</li>
-                 <li>Jobs</li>
-                 <li>Subscriptions</li>
-                 <li>Talent workshop</li>
-                 <li>CPSC Certificates</li>
-                 <li>Ratings</li>
-                 <li>Contacts Us</li>
-               </ul>
-
-               <ul>
-                 <h4>SITES</h4>
-                 <li>DC</li>
-                 <li>Mad magazine</li>
-                 <li>DC kids</li>
-                 <li>DC universe</li>
-                 <li>DC power visa</li>
-               </ul>
-
+                <div>
+                    <ul>
+                      <h4>DC</h4>
+                      <li>Terms of use</li>
+                      <li>Privacy policy (new)</li>
+                      <li>Ad choise</li>
+                      <li>Advertising</li>
+                      <li>Jobs</li>
+                      <li>Subscriptions</li>
+                      <li>Talent workshop</li>
+                      <li>CPSC Certificates</li>
+                      <li>Ratings</li>
+                      <li>Contacts Us</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                      <h4>SITES</h4>
+                      <li>DC</li>
+                      <li>Mad magazine</li>
+                      <li>DC kids</li>
+                      <li>DC universe</li>
+                      <li>DC power visa</li>
+                    </ul>            
+                </div>
             </nav>
             <div class="image">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -93,6 +95,7 @@ footer{
         margin: auto;
         display: flex;
         justify-content: space-between;
+
         padding: .5rem 0;
         div button{
             border: solid 1px $dc-color;
@@ -111,8 +114,7 @@ footer{
             i{
                 border-radius: 100%;
                 background-color: $link-color;
-                padding: 1rem;
-                
+                padding: 1rem;           
             }
         }
     }
