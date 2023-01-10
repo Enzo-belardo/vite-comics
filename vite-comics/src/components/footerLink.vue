@@ -9,7 +9,7 @@ export default{
     <footer>
         <div class="container-top-foot">
             <nav>
-                <div>
+                <div class="container-list">
                     <ul>
                       <h4>DC Comics</h4>
                       <li>Characters</li>
@@ -28,7 +28,7 @@ export default{
                     </ul>
                 </div>
 
-                <div>
+                <div class="container-list">
                     <ul>
                       <h4>DC</h4>
                       <li>Terms of use</li>
@@ -43,7 +43,7 @@ export default{
                       <li>Contacts Us</li>
                     </ul>
                 </div>
-                <div>
+                <div class="container-list">
                     <ul>
                       <h4>SITES</h4>
                       <li>DC</li>
@@ -65,10 +65,11 @@ export default{
                 </div>
                 <div class="icon">
                     <h3>FOLLOW US</h3>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-pinterest-p"></i>
+                    <img src="../assets/img/footer-facebook.png" alt="">
+                    <img src="../assets/img/footer-twitter.png" alt="">
+                    <img src="../assets/img/footer-youtube.png" alt="">
+                    <img src="../assets/img/footer-pinterest.png" alt="">
+                    <img src="../assets/img/footer-periscope.png" alt="">
                 </div>
             </div>
         </div>
@@ -88,8 +89,32 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+nav{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 1rem;
+    line-height: 1.2rem;
+    h4{
+        color: $main-color;
+    }
+    li{
+        color: $link-color;
+    }
+}
+
+.image {
+    width: 35%;   
+    img{
+        width: 100% ;
+    }
+}
 .container-down-foot{
-    background-color: black;
+    background-color: $buttom-footer;
     div{
         width: 80%;
         margin: auto;
@@ -106,40 +131,15 @@ footer{
         .icon{
             color: $main-color;
             display: flex;
-            justify-content: space-around;
+            justify-content: flex-end;
             align-items: center;
             h3{
                 color: $dc-color;
             }
-            i{
-                border-radius: 100%;
-                background-color: $link-color;
-                padding: 1rem;           
+            img{
+                margin-left: 1rem;
             }
         }
-    }
-}
-nav{
-    width: 45%;
-    display: flex;
-    flex-wrap: wrap;
-}
-ul{
-    list-style-type: none;
-    padding-left: 0;
-    padding-right: 1rem;
-    h4{
-        color: $main-color;
-    }
-    li{
-        color: $link-color;
-    }
-}
-
-.image {
-    width: 35%;   
-    img{
-        width: 100% ;
     }
 }
 
