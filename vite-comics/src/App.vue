@@ -3,6 +3,7 @@ import navBar from './components/navBar.vue'
 import articleMain from './components/articleMain.vue'
 import footerLink from './components/footerLink.vue'
 import productMain from './components/productMain.vue';
+import JumboComponent from './components/JumboComponent.vue';
 
 export default {
   name: 'AppDC',
@@ -10,7 +11,8 @@ export default {
     navBar,
     articleMain,
     productMain,
-    footerLink
+    footerLink,
+    JumboComponent,
 
   }
 }
@@ -24,6 +26,7 @@ export default {
   </header>
 
   <main>
+    <JumboComponent/>
     <articleMain/>
     <productMain/>
   </main>
