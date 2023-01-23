@@ -1,9 +1,11 @@
 <script>
 import productMain from './productMain.vue';
+import JumboComponent from '../components/JumboComponent.vue';
 
 export default{
     components:{
         productMain,
+        JumboComponent,
     },
     data() {
         return {
@@ -76,7 +78,7 @@ export default{
                 },
                 {
                   "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/gn-covers/2019/04/CTWv1_CC_144-001_HD_5ca5299a751963.53054221.jpg?itok=ooPaoLDq",
-                  "price": "$16.99",
+                  "price": "$16,99",
                   "series": "Catwoman",
                   "type": "graphic novel"
                 }
@@ -88,34 +90,35 @@ export default{
 </script>
 
 <template>
-  <main>
-    <div class="container">
-      <productMain v-for="(product , index) in productList"
-      :thumb="product.thumb" 
-      :price="product.price"
-      :series="product.series" 
-      :type="product.type" />
-    </div>
-  </main>
+  <div>
+    <JumboComponent/>
+  </div>
+  <div class="container">
+    <productMain v-for="(product) in productList"
+    :thumb="product.thumb" 
+    :price="product.price"
+    :series="product.series" 
+    :type="product.type"/>
+    <button>LOAD MORE</button>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
-main{
-  background-color: $nav-color;
-  color: $main-color;
-  width: 100%;
-  
-  h2{
-    padding: 3rem;
-  }
-}
+
 .container{
   max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 4rem;      
+  justify-content: center;
+  padding: 4rem;
+  button{
+    padding: .5rem 2rem;
+    background-color: $dc-color;
+    color: white;
+    
+  }      
 }
         
 </style>

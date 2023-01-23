@@ -73,14 +73,14 @@ export default{
 @use '../styles/partials/variables' as *;
 header{
     color: $main-color;
-}
- nav{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    color: $nav-color;
+    nav{
+       display: flex;
+       width: 80%;
+       margin: auto;
+       justify-content: space-between;
+       align-items: center;
+       color: $nav-color;
+   }
 }
 .logo img{
     width: 50%;

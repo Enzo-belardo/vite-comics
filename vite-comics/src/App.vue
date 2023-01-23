@@ -1,19 +1,15 @@
 <script>
-import navBar from './components/navBar.vue'
-import articleMain from './components/articleMain.vue'
-import footerLink from './components/footerLink.vue'
-import productMain from './components/productMain.vue';
-import JumboComponent from './components/JumboComponent.vue';
+import appHeader from './components/appHeader.vue'
+import appMain from './components/appMain.vue'
+import appFooter from './components/appFooter.vue'
+
 
 export default {
-  name: 'AppDC',
+  name: 'appVue',
   components: {
-    navBar,
-    articleMain,
-    productMain,
-    footerLink,
-    JumboComponent,
-
+    appHeader,
+    appMain,
+    appFooter,
   }
 }
 
@@ -22,17 +18,15 @@ export default {
 
 <template>
   <header>
-    <navBar/>
+    <appHeader/>
   </header>
 
   <main>
-    <JumboComponent/>
-    <articleMain/>
-    <productMain/>
+    <appMain/>
   </main>
 
   <footer>
-    <footerLink/>
+    <appFooter/>
   </footer>
 
 </template>
@@ -40,5 +34,10 @@ export default {
 <style lang="scss">
 @use './styles/general.scss' as *;
 @use './styles/partials/variables' as *;
+main{
+  background-color: $nav-color;
+  color: $main-color;
+  width: 100%;
+}
 
 </style>
